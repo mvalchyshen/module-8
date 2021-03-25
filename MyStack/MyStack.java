@@ -1,4 +1,4 @@
-package module8.HomeWork.MyStack;
+package HomeWork.MyStack;
 
 import java.util.Arrays;
 import java.util.EmptyStackException;

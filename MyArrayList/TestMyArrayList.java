@@ -1,4 +1,4 @@
-package module8.HomeWork.MyArrayList;
+package HomeWork.MyArrayList;
 
 import java.util.ArrayList;
 
@@ -7,15 +7,13 @@ public class TestMyArrayList {
         MyArrayList<Integer> myArrayList = new MyArrayList<>();
         ArrayList<String> arrayList = new ArrayList<>();
         //1 add
-        myArrayList.add(1);
-        myArrayList.add(2);
-        myArrayList.add(3);
-        myArrayList.add(4);
-        myArrayList.add(5);
+        for (int i = 0; i < 20; i++) {
+            myArrayList.add(i);
+        }
         //4 size
         System.out.println(myArrayList.size());
         //5 get
-        System.out.println(myArrayList.get(3));
+        System.out.println(myArrayList.get(0));
         System.out.println(myArrayList);
         //2 remove
         System.out.println(myArrayList.remove(3));

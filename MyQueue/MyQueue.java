@@ -1,4 +1,4 @@
-package module8.HomeWork.MyQueue;
+package HomeWork.MyQueue;
 
 import java.util.Arrays;
 import java.util.Objects;

@@ -1,4 +1,4 @@
-package module8.HomeWork.MyQueue;
+package HomeWork.MyQueue;
 
 public class TestMyQueue {
     public static void main(String[] args) {

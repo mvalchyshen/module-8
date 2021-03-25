@@ -1,4 +1,4 @@
-package module8.HomeWork.MyHashMap;
+package HomeWork.MyHashMap;
 
 import java.util.HashMap;
 import java.util.Map;

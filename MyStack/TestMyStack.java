@@ -1,4 +1,4 @@
-package module8.HomeWork.MyStack;
+package HomeWork.MyStack;
 
 public class TestMyStack {
     public static void main(String[] args) {

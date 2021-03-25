@@ -1,4 +1,4 @@
-package module8.HomeWork.MyLinkedList;
+package HomeWork.MyLinkedList;
 
 public class MyLinkedList<E> {
 
@@ -25,6 +25,7 @@ public class MyLinkedList<E> {
     public void add(E e) {
         if (first == null){
             addFirst(e);
+            return;
         }
         MyNode<E> l = last;
         MyNode<E> newNode = new MyNode<>(e, null, l);
@@ -52,8 +53,10 @@ public class MyLinkedList<E> {
             System.out.println("Out of range");
         } else if (index == 0){
             removeFirst();
+            return;
         } else if (index == size - 1) {
             removeLast();
+            return;
         } else {
             MyNode<E> previous = first;
 
@@ -69,11 +72,9 @@ public class MyLinkedList<E> {
 
 
     private void removeFirst() {
-        if (size == 1) {
-            MyNode<E> temp = first;
-            first = first.next;
-            size--;
-        }
+        MyNode<E> temp = first;
+        first = first.next;
+        size--;
     }
 
     private void removeLast() {
@@ -99,9 +100,9 @@ public class MyLinkedList<E> {
         if (index < 0 ||index > size) {
             System.err.println("Out of range");
         } else if (index == 0) {
-            getFirst();
+             return getFirst();
         } else if (index == size - 1) {
-            getLast();
+             return getLast();
         } else {
             MyNode<E> current = first.next;
             for (int i = 0; i < index; i++) {

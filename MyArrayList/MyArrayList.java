@@ -1,14 +1,16 @@
-package module8.HomeWork.MyArrayList;
+package HomeWork.MyArrayList;
+
+import java.util.Arrays;
 
 public class MyArrayList<E> {
-    private static final int INITIAL_CAPACITY = 16;
+    private static final int INITIAL_CAPACITY = 10;
     private E[] array;
     private  int size;
 
     public MyArrayList()
     {
-        this.array = (E[]) new  Object[INITIAL_CAPACITY];
-        this.size = 0;
+        array = (E[]) new  Object[INITIAL_CAPACITY];
+        size = 0;
     }
 
     public void add(E element) {
@@ -16,16 +18,14 @@ public class MyArrayList<E> {
             throw new NullPointerException();
         }
         if (size >= array.length) {
-            resize(array);
+            resize();
         }
         array[size] = element;
         size++;
     }
 
-    private void resize(E[] array) {
-        E[] newArray = (E[]) new Object[array.length * 2];
-        System.arraycopy(array, 0, newArray, 0, newArray.length);
-         this.array = newArray;
+    private void resize() {
+        array = (E[]) Arrays.copyOf(array, (size * 3 / 2 + 1));
     }
     public E remove(int index) {
         int newSize;
